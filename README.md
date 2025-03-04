@@ -2,9 +2,10 @@
 
 Welcome to my repository! This space is dedicated to my continuous learning in:  
 
-- 🧠 Machine Learning (ML)  
+- 👀 Computer Vision (CV)
+- 🧠 Machine Learning (ML) 
 - 🤖 Deep Learning (DL)  
-- 📊 Data Science  
+- 📊 Data Science (DS)
 - 💻 Coding & Problem Solving  
 
 ## 📌 What's Inside?  
