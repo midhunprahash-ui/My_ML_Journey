@@ -1,92 +1,82 @@
-# Operations with Arrays in Python
+# Operations with Arrays in pandas
 
 ## 📌 Introduction  
-Arrays in Python can be handled using the **NumPy** library, which provides efficient storage and operations for numerical data. NumPy arrays (ndarray) are more powerful and flexible than Python lists, making them essential for scientific computing and data processing.
+pandas provides powerful tools to work with arrays (Series and DataFrame structures) efficiently. It enables vectorized operations, data transformations, and aggregations with ease.
 
-## 📌 Installation  
-```bash
-pip install numpy
-```
-
-## 📌 Creating Arrays  
-### ✅ Creating a NumPy Array  
+## 📌 Creating Arrays in pandas  
+### ✅ Creating a Series (1D Array)  
 ```python
+import pandas as pd
 import numpy as np
 
-arr = np.array([1, 2, 3, 4, 5])
-print(arr)
+series = pd.Series([10, 20, 30, 40, 50])
+print(series)
 ```
 
-### ✅ Creating Multi-dimensional Arrays  
+### ✅ Creating a DataFrame (2D Array)  
 ```python
-matrix = np.array([[1, 2, 3], [4, 5, 6]])
-print(matrix)
+data = {'A': [1, 2, 3], 'B': [4, 5, 6], 'C': [7, 8, 9]}
+df = pd.DataFrame(data)
+print(df)
 ```
 
-### ✅ Creating Special Arrays  
+## 📌 Array Operations in pandas  
+### 🔹 Arithmetic Operations  
 ```python
-np.zeros((3, 3))  # 3x3 matrix of zeros
-np.ones((2, 4))   # 2x4 matrix of ones
-np.eye(3)         # 3x3 identity matrix
-np.arange(0, 10, 2)  # Array from 0 to 10 with step 2
-np.linspace(0, 1, 5) # 5 values between 0 and 1
+s1 = pd.Series([1, 2, 3])
+s2 = pd.Series([4, 5, 6])
+
+print(s1 + s2)  # Element-wise addition
+print(s1 - s2)  # Element-wise subtraction
+print(s1 * s2)  # Element-wise multiplication
+print(s1 / s2)  # Element-wise division
 ```
 
-## 📌 Array Operations  
-### 🔹 Basic Arithmetic Operations  
+### 🔹 Applying Functions  
 ```python
-arr1 = np.array([1, 2, 3])
-arr2 = np.array([4, 5, 6])
+def square(x):
+    return x ** 2
 
-print(arr1 + arr2)  # Element-wise addition
-print(arr1 - arr2)  # Element-wise subtraction
-print(arr1 * arr2)  # Element-wise multiplication
-print(arr1 / arr2)  # Element-wise division
-print(arr1 ** 2)    # Element-wise exponentiation
+series.apply(square)  # Apply function to each element
 ```
 
 ### 🔹 Aggregate Functions  
 ```python
-arr = np.array([1, 2, 3, 4, 5])
-
-print(arr.sum())      # Sum of all elements
-print(arr.mean())     # Mean of the elements
-print(arr.min())      # Minimum value
-print(arr.max())      # Maximum value
-print(arr.std())      # Standard deviation
+print(series.sum())    # Sum of elements
+print(series.mean())   # Mean value
+print(series.min())    # Minimum value
+print(series.max())    # Maximum value
+print(series.std())    # Standard deviation
 ```
 
 ### 🔹 Indexing and Slicing  
 ```python
-arr = np.array([10, 20, 30, 40, 50])
-print(arr[0])   # First element
-print(arr[-1])  # Last element
-print(arr[1:4]) # Elements from index 1 to 3
+print(series[0])    # First element
+print(series[-1])   # Last element
+print(series[1:4])  # Elements from index 1 to 3
 ```
 
-### 🔹 Reshaping and Transposing  
+### 🔹 Filtering with Conditions  
 ```python
-matrix = np.array([[1, 2, 3], [4, 5, 6]])
-
-print(matrix.reshape(3, 2))  # Reshape into 3 rows and 2 columns
-print(matrix.T)               # Transpose the matrix
+print(series[series > 20])  # Elements greater than 20
 ```
 
-### 🔹 Concatenation and Stacking  
+### 🔹 Handling Missing Values  
 ```python
-arr1 = np.array([1, 2, 3])
-arr2 = np.array([4, 5, 6])
-
-print(np.concatenate((arr1, arr2)))  # Concatenate arrays
-print(np.vstack((arr1, arr2)))       # Stack vertically
-print(np.hstack((arr1, arr2)))       # Stack horizontally
+series_with_nan = pd.Series([1, np.nan, 3, np.nan, 5])
+print(series_with_nan.dropna())  # Remove NaN values
+print(series_with_nan.fillna(0)) # Replace NaN with 0
 ```
 
-### 🔹 Filtering and Boolean Masking  
+### 🔹 DataFrame Operations  
 ```python
-arr = np.array([10, 15, 20, 25, 30])
-print(arr[arr > 20])  # Filter elements greater than 20
+df['D'] = df['A'] + df['B']  # Create new column with sum
+print(df)
+
+df.drop(columns=['C'], inplace=True)  # Remove column
+print(df)
 ```
 
 ## 📌 Conclusion  
-NumPy provides powerful array operations that optimize performance for numerical computations
+pandas provides intuitive and efficient operations for working with arrays in Series and DataFrame formats. These operations make it a fundamental tool for data manipulation and analysis.
+
