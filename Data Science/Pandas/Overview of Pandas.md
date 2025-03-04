@@ -1,4 +1,4 @@
-# Overview of pandas Library
+# Overview of Pandas Library
 
 ## 📌 Introduction  
 **pandas** is a fast, powerful, and flexible open-source Python library used for data manipulation and analysis. It provides data structures like **Series** and **DataFrame** that make it easy to handle structured data efficiently.  
