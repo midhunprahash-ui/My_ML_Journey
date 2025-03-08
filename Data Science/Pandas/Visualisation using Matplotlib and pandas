@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Sample DataFrame
+data = {
+    "Category": ["A", "B", "C", "D", "E"],
+    "Values": [10, 20, 15, 25, 30]
+}
+
+df = pd.DataFrame(data)
+
+# Plotting the DataFrame
+plt.figure(figsize=(8, 5))
+plt.bar(df["Category"], df["Values"], color='skyblue')
+
+# Customizing the plot
+plt.xlabel("Category")
+plt.ylabel("Values")
+plt.title("Bar Chart of Categories vs Values")
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+# Show the plot
+plt.show()
