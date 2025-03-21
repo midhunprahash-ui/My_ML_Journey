@@ -4,7 +4,7 @@ Welcome to my repository! This space is dedicated to my continuous learning in:
 
 - 👀 Computer Vision (CV)
 - 🧠 Machine Learning (ML) 
-- 🤖 Deep Learning (DL)  
+- 🤖 Natural Language Processing 
 - 📊 Data Science (DS)
 - 💻 Coding & Problem Solving  
 
