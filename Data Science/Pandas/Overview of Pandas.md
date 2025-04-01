@@ -97,6 +97,13 @@ df['Age'].plot(kind='bar')
 plt.show()
 ```
 
+## 📌 Dataframes in Pandas  
+```python
+import pandas as pd
+df=pd.read_csv("File Name")
+df.info()
+```
+
 ## 📌 Conclusion  
 pandas is an essential tool for data scientists and analysts, providing powerful capabilities for data manipulation, analysis, and visualization. It integrates well with other libraries like NumPy, Matplotlib, and scikit-learn, making it a must-learn library for anyone working with data in Python.
 
