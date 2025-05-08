@@ -38,3 +38,54 @@ Think of it like this:
 ---
 
 ## 🎯 Visual (Very Simple)
+
+---
+
+## 🔎 Why Use a RAG Pipeline?
+
+- ✅ **Up-to-date Answers** (uses external knowledge)
+- ✅ **Reduces Hallucination** (AI makes fewer things up)
+- ✅ **Domain-Specific** (works with company data, medical info, etc.)
+
+---
+
+## 🧰 Tools Commonly Used in RAG Pipelines
+
+- **Retrievers**: FAISS, Pinecone, ChromaDB
+- **Embeddings**: Sentence-BERT, OpenAI Embeddings
+- **Generators**: GPT models (e.g., GPT-3, GPT-4), BART, T5
+- **Frameworks**: LangChain, LlamaIndex, Haystack
+
+---
+
+## 🔥 Example Use Case
+
+> A chatbot that answers customer questions by pulling real-time info from your company’s documents instead of only relying on what it was trained on.
+
+---
+
+## 🚩 Keep in Mind
+
+- Quality depends on **good retrieval**.
+- Needs regular updates to the document database.
+- More moving parts (retriever + generator + database).
+
+---
+
+## ✅ Summary
+
+The **RAG Pipeline** is simple but powerful:
+- 🔎 **Retrieves facts** ➕ ✍️ **Generates natural language**  
+Result: Answers that are accurate, fresh, and human-like.
+
+---
+
+## 🙌 References
+
+- [Facebook AI RAG Paper](https://arxiv.org/abs/2005.11401)
+- [LangChain Docs](https://python.langchain.com/docs/get_started/introduction)
+- [LlamaIndex Docs](https://docs.llamaindex.ai/en/latest/)
+
+---
+
+⭐️ *Star this repo if you found the explanation useful!*
