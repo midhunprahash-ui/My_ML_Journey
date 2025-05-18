@@ -33,7 +33,7 @@ print(df)
 ```
 
 ## 📌 Essential Operations  
-### 🔹 Reading Data  
+### Reading Data  
 ```python
 df = pd.read_csv('data.csv')   # Read CSV file
 df = pd.read_excel('data.xlsx') # Read Excel file
