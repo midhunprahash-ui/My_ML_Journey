@@ -54,7 +54,7 @@ df.describe()  # Statistical summary
 df.shape  # Get number of rows and columns
 ```
 
-### 🔹 Data Selection  
+### Data Selection  
 ```python
 df['Name']  # Select a single column
 df[['Name', 'Age']]  # Select multiple columns
