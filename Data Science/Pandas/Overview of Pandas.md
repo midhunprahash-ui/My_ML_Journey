@@ -45,7 +45,7 @@ df.to_csv('output.csv', index=False)  # Save DataFrame to CSV
 df.to_excel('output.xlsx', index=False) # Save to Excel
 ```
 
-### 🔹 Data Exploration  
+### Data Exploration  
 ```python
 df.head()  # First 5 rows
 df.tail()  # Last 5 rows
