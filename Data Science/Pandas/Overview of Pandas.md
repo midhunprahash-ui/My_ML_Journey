@@ -77,13 +77,13 @@ df['Age'] = df['Age'] + 1  # Modify column values
 df['Age_Group'] = df['Age'].apply(lambda x: 'Senior' if x > 30 else 'Young')
 ```
 
-### 🔹 Merging and Joining  
+### Merging and Joining  
 ```python
 df1.merge(df2, on='ID', how='inner')  # Merge two DataFrames
 df1.append(df2, ignore_index=True)  # Append DataFrame
 ```
 
-### 🔹 Grouping and Aggregation  
+### Grouping and Aggregation  
 ```python
 df.groupby('City')['Age'].mean()  # Group by City and get average Age
 df.pivot_table(values='Age', index='City', aggfunc='sum')  # Pivot Table
