@@ -63,7 +63,7 @@ df.iloc[0]  # Select a row by position
 df[df['Age'] > 30]  # Filter rows based on condition
 ```
 
-### 🔹 Data Cleaning  
+### Data Cleaning  
 ```python
 df.dropna()  # Remove missing values
 df.fillna(0)  # Fill missing values with 0
@@ -71,7 +71,7 @@ df.drop_duplicates()  # Remove duplicate rows
 df.rename(columns={'Name': 'Full_Name'})  # Rename column
 ```
 
-### 🔹 Data Transformation  
+### Data Transformation  
 ```python
 df['Age'] = df['Age'] + 1  # Modify column values
 df['Age_Group'] = df['Age'].apply(lambda x: 'Senior' if x > 30 else 'Young')
