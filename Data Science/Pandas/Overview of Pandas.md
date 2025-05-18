@@ -39,7 +39,7 @@ df = pd.read_csv('data.csv')   # Read CSV file
 df = pd.read_excel('data.xlsx') # Read Excel file
 ```
 
-### 🔹 Writing Data  
+### Writing Data  
 ```python
 df.to_csv('output.csv', index=False)  # Save DataFrame to CSV
 df.to_excel('output.xlsx', index=False) # Save to Excel
