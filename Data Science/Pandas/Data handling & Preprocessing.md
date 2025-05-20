@@ -37,7 +37,7 @@ df['column'].fillna(df['column'].median(), inplace=True)  # with median
 df['column'].fillna(method='ffill', inplace=True)  # forward fill
 df['column'].fillna(method='bfill', inplace=True)  # backward fill
 ```
-
+## 🔄 2.Feature Scaling
 ```python
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
