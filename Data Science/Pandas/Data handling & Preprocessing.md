@@ -19,3 +19,10 @@ df['column'].fillna(method='bfill', inplace=True)  # backward fill
 
 # Drop rows with missing values
 df.dropna(subset=['column'], inplace=True)
+
+# Check duplicates
+print(df.duplicated().sum())
+
+# Remove duplicates
+df.drop_duplicates(inplace=True)
+df.drop_duplicates(subset=['column'], inplace=True)  # based on specific columns
