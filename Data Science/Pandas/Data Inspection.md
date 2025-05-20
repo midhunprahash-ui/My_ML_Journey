@@ -6,7 +6,17 @@ Data inspection is one of the first and most critical steps in the data analysis
 
 ## 📦 1. Load Data
 
+
 ```python
 import pandas as pd
+# Display basic information about the dataset
+print(df.info())
 
-df = pd.read_csv('your_file.csv')
+# Get dataset dimensions (rows, columns)
+print(df.shape)
+
+# Display column names
+print(df.columns)
+
+
+```
