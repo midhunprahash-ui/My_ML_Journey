@@ -32,6 +32,16 @@ print(df.describe())
 # Include object columns in summary
 print(df.describe(include='all'))
 
+# Count unique values in each column
+print(df.nunique())# Check for missing values
+print(df.isnull().sum())
+
+# Get percentage of missing values
+print((df.isnull().sum() / len(df)) * 100)
+
+# Display rows with missing values
+print(df[df.isnull().any(axis=1)])
+df = pd.read_csv('your_file.csv')
 
 
 ```
