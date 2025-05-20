@@ -43,5 +43,19 @@ print((df.isnull().sum() / len(df)) * 100)
 print(df[df.isnull().any(axis=1)])
 df = pd.read_csv('your_file.csv')
 
+# Calculate correlation matrix
+correlation_matrix = df.corr()
+
+# Display correlation matrix
+print(correlation_matrix)
+
+# Visualize correlation matrix using seaborn
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.show()
+
 
 ```
