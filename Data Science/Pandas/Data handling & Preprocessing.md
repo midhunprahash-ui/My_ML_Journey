@@ -26,3 +26,26 @@ print(df.duplicated().sum())
 # Remove duplicates
 df.drop_duplicates(inplace=True)
 df.drop_duplicates(subset=['column'], inplace=True)  # based on specific columns
+
+# Check missing values
+print(df.isnull().sum())
+
+# Fill missing values
+df['column'].fillna(df['column'].mean(), inplace=True)  # with mean
+df['column'].fillna(df['column'].mode()[0], inplace=True)  # with mode
+df['column'].fillna(df['column'].median(), inplace=True)  # with median
+df['column'].fillna(method='ffill', inplace=True)  # forward fill
+df['column'].fillna(method='bfill', inplace=True)  # backward fill
+```
+
+```python
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+
+# Standard Scaling (Z-score normalization)
+scaler = StandardScaler()
+df['scaled_column'] = scaler.fit_transform(df[['column']])
+
+# Min-Max Scaling
+minmax_scaler = MinMaxScaler()
+df['normalized_column'] = minmax_scaler.fit_transform(df[['column']])
+```
