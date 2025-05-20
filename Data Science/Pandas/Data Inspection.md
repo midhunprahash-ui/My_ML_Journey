@@ -63,4 +63,13 @@ print(df.info(memory_usage='deep'))
 # Memory usage by column
 print(df.memory_usage(deep=True))
 
+# Check for duplicates
+print("Number of duplicate rows:", df.duplicated().sum())
+
+# Display duplicate rows
+print(df[df.duplicated()])
+
+# Check for infinite values
+print("Columns with infinite values:", df.columns[np.isinf(df).any()].tolist())
+
 ```
