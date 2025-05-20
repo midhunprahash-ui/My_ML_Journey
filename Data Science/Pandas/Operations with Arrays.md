@@ -61,7 +61,7 @@ print(series[1:4])  # Elements from index 1 to 3
 print(series[series > 20])  # Elements greater than 20
 ```
 
-### 🔹 Handling Missing Values  
+### Handling Missing Values  
 ```python
 series_with_nan = pd.Series([1, np.nan, 3, np.nan, 5])
 print(series_with_nan.dropna())  # Remove NaN values
