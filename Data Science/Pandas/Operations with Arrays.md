@@ -49,7 +49,7 @@ print(series.max())    # Maximum value
 print(series.std())    # Standard deviation
 ```
 
-### 🔹 Indexing and Slicing  
+### Indexing and Slicing  
 ```python
 print(series[0])    # First element
 print(series[-1])   # Last element
