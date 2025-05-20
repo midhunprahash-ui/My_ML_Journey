@@ -72,4 +72,22 @@ print(df[df.duplicated()])
 # Check for infinite values
 print("Columns with infinite values:", df.columns[np.isinf(df).any()].tolist())
 
+def inspect_column(df, column_name):
+    """
+    Comprehensive column inspection
+    """
+    print(f"\nInspecting column: {column_name}")
+    print("-" * 50)
+    print(f"Data type: {df[column_name].dtype}")
+    print(f"Number of unique values: {df[column_name].nunique()}")
+    print(f"Number of missing values: {df[column_name].isnull().sum()}")
+    print(f"Value counts:\n{df[column_name].value_counts().head()}")
+    
+    if df[column_name].dtype in ['int64', 'float64']:
+        print("\nNumerical Statistics:")
+        print(df[column_name].describe())
+
+# Usage
+inspect_column(df, 'column_name')
+
 ```
