@@ -7,4 +7,15 @@ Before training a model, your data needs to be cleaned, formatted, and transform
 ## 🧽 1. Cleaning Column Names
 
 ```python
-df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_')
+# Check missing values
+print(df.isnull().sum())
+
+# Fill missing values
+df['column'].fillna(df['column'].mean(), inplace=True)  # with mean
+df['column'].fillna(df['column'].mode()[0], inplace=True)  # with mode
+df['column'].fillna(df['column'].median(), inplace=True)  # with median
+df['column'].fillna(method='ffill', inplace=True)  # forward fill
+df['column'].fillna(method='bfill', inplace=True)  # backward fill
+
+# Drop rows with missing values
+df.dropna(subset=['column'], inplace=True)
