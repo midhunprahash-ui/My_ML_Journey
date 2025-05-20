@@ -57,5 +57,10 @@ plt.figure(figsize=(10, 8))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
 plt.show()
 
+# Display memory usage of DataFrame
+print(df.info(memory_usage='deep'))
+
+# Memory usage by column
+print(df.memory_usage(deep=True))
 
 ```
