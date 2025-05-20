@@ -32,7 +32,7 @@ print(s1 * s2)  # Element-wise multiplication
 print(s1 / s2)  # Element-wise division
 ```
 
-### 🔹 Applying Functions  
+### Applying Functions  
 ```python
 def square(x):
     return x ** 2
