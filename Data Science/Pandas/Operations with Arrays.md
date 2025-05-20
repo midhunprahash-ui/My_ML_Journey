@@ -68,7 +68,7 @@ print(series_with_nan.dropna())  # Remove NaN values
 print(series_with_nan.fillna(0)) # Replace NaN with 0
 ```
 
-### 🔹 DataFrame Operations  
+### DataFrame Operations  
 ```python
 df['D'] = df['A'] + df['B']  # Create new column with sum
 print(df)
