@@ -56,7 +56,7 @@ print(series[-1])   # Last element
 print(series[1:4])  # Elements from index 1 to 3
 ```
 
-### 🔹 Filtering with Conditions  
+### Filtering with Conditions  
 ```python
 print(series[series > 20])  # Elements greater than 20
 ```
